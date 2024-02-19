@@ -115,4 +115,5 @@ modal.addEventListener('click', function () {
   main.classList.remove('hidden');
   const header = document.getElementById('header');
   header.classList.remove('hidden');
+  window.location.reload();
 });
