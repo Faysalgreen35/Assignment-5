@@ -1,45 +1,58 @@
-// console.log('connected');
-
-let seatSecleted = 1;
+let seatSelected = 0;
 let totalPrice = 0;
 const ticket = document.querySelectorAll('.tickets');
-// console.log(ticket);
 
 for (const element of ticket) {
-  //   console.log(element);
   element.addEventListener('click', function () {
-    // console.log('clicked');
+    // Check if the user has already selected 4 seats
+    if (seatSelected >= 4) {
+      return; // If yes, do nothing
+    }
 
-    // get the seat number
+    // Check if the seat is already selected
+    if (element.classList.contains('bg-green-500')) {
+      // If it's already selected, do nothing
+      return;
+    }
+
+    // Add the selected class
     element.classList.add('bg-green-500');
 
     const seatName = element.querySelector('h5').innerText;
-    // console.log(seatName.innerText);
-    const clases = 'Economoy';
+    const clases = 'Economy';
     const price = 550;
 
     const titleContainer = document.getElementById('title-container');
     const seatNumber = document.getElementById('seat-number');
-    seatNumber.innerText = seatSecleted;
+    seatNumber.innerText = seatSelected + 1;
 
     let availableSeat = document.getElementById('available-seat');
     let availableseatText = parseInt(availableSeat.innerText);
     availableSeat.innerText = availableseatText - 1;
-    // availableSeat = availableseatText;
-    // console.log(availableseatText);
 
     const p = document.createElement('p');
     p.innerText =
-      seatSecleted + '.  ' + seatName + '       ' + clases + ['     '] + price;
+      seatSelected +
+      1 +
+      '.  ' +
+      seatName +
+      '       ' +
+      clases +
+      '     ' +
+      price;
     titleContainer.appendChild(p);
-    seatSecleted++;
 
-    // calculate price  Couple 20
+    // Increment the selected seat count
+    seatSelected++;
+
+    // Calculate total price
     totalPrice += price;
     document.getElementById('total-price').innerText = totalPrice;
+    document.getElementById('grand-total').innerText = totalPrice;
   });
 }
 
+// -----------------------------------
 const btn = document.getElementById('apply-btn');
 btn.addEventListener('click', function () {
   // get the value from input
@@ -80,12 +93,26 @@ btn.addEventListener('click', function () {
 
 const next = document.getElementById('next-btn');
 next.addEventListener('click', function () {
-  if (seatSecleted > 0) {
+  const totalPrice = document.getElementById('total-price').innerText;
+  console.log(totalPrice);
+
+  if (totalPrice > 0) {
     const modal = document.getElementById('modal');
     modal.classList.remove('hidden');
     const main = document.getElementById('main');
     main.classList.add('hidden');
     const header = document.getElementById('header');
     header.classList.add('hidden');
+  } else {
+    alert('please select atleast a seat');
   }
+});
+
+const modal = document.getElementById('modal');
+modal.addEventListener('click', function () {
+  modal.classList.add('hidden');
+  const main = document.getElementById('main');
+  main.classList.remove('hidden');
+  const header = document.getElementById('header');
+  header.classList.remove('hidden');
 });
