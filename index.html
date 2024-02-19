@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practise of assignment 5</title>
+    <!-- fontawsome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/36d6e9282a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tailwind and daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .raleway {
+        font-family: 'Raleway', sans-serif;
+      }
+      .inter {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="my-24 w-[1170px] mx-auto ">
+      <nav>
+        <div class="navbar bg-base-100 flex flex-row">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class=" raleway menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
+              >
+                <li><a>Home</a></li>
+
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-3xl font-extrabold">MBF-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex raleway">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="flex navbar-end ">
+            <span>
+              <a class="btn bg-[#1DD1001A] text-[#1DD100]"
+                >Bus <img src="images/bus-icon.png" alt=""
+              /></a>
+            </span>
+          </div>
+        </div>
+      </nav>
+      <div class="banner    gap-6 space-y-12 mx-auto bg-fixed bg-cover bg-center   ">
+        <div class="carousel lg:w-full mx-auto lg:mx-2">
+          <div id="slide1" class="carousel-item   w-full">
+            <!-- slide1 -->
+            <img src="images/banner.png" class="w-full bg-fixed    bg-cover bg-center inset-0" />
+            <div
+              class="absolute top-12 left-0 w-full h-full text-center gap-24"
+            >
+              <h1 class="text-white text-5xl font-bold text-center mt-64 raleway">
+                End-to-End Travel with P Paribahan
+              </h1>
+
+              <h2 class="text-center text-5xl font-bold text-[#1DD100] mt-8 raleway ">
+                MBF Paribahan
+              </h2>
+
+              <p class="px-60 mt-8 inter">
+                From initial booking to reaching the destination, passengers can
+                expect reliability, comfort, and a range of amenities tailored
+                to their needs. .
+              </p>
+              <button class="btn bg-[#1DD100] text-center mt-8 raleway">
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-x-4">
+        <!-- card 1-->
+        <div
+          class="bg-white py-32 sm-m-12 lg:py-6 w-[90%] p-12 lg:w-[340px] lg:mt-0 mx-auto translate-x-12 -translate-y-16 lg:p-8 text-black rounded-xl lg:mx-0 border-b-4 border-b-[#1DD100] gap-2"
+        >
+          <div class="flex mx-8">
+            <div><img src="images/people.png" class="w-16" /></div>
+            <div class="ml-3">
+              <h2 class="text-4xl lg:text-2xl font-extrabold p-1 block">
+                500K+
+              </h2>
+              <p class="font-semibold text-2xl lg:text-sm mt-3 lg:mt-4 mb-2">
+                Registered users
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div
+          class="bg-white py-32 sm-m-12 lg:py-6 w-[90%] p-12 lg:w-[340px] lg:mt-0 mx-auto translate-x-12 -translate-y-16 lg:p-8 text-black rounded-xl lg:mx-0 border-b-4 border-b-[#1DD100] gap-4"
+        >
+          <div class="flex mx-8">
+            <div><img src="images/ticket-cupon.png" class="w-16" /></div>
+            <div class="ml-3">
+              <h2 class="text-4xl lg:text-xl font-extrabold p-1 block">
+                1.7 lacks
+              </h2>
+              <p class="font-semibold text-2xl lg:text-sm mt-3 lg:mt-4 mb-2">
+                Tickets sold
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div
+          class="bg-white py-32 sm-m-12 lg:py-6 w-[90%] p-12 lg:w-[340px] lg:mt-0 mx-auto translate-x-12 -translate-y-16 lg:p-8 text-black rounded-xl lg:mx-0 gap-4 border-b-4 border-b-[#1DD100]"
+        >
+          <div class="flex mr-5 mx-8">
+            <div><img src="images/stoppage.png" class="w-16" /></div>
+            <div class="ml-3">
+              <h2 class="text-4xl lg:text-2xl font-extrabold p-1 block">
+                80K+
+              </h2>
+              <p class="font-semibold text-2xl lg:text-sm mt-3 lg:mt-4 mb-2">
+                Rental partners
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="">
+      <section class="w-[1170px] mx-auto   ">
+        <div class="m-6">
+          <div class="text-center">
+            <h2 class="text-4xl font-extrabold raleway">Best offers for you</h2>
+
+           
+          </div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-0 space-y-1 lg:space-y-4 gap-40 lg:gap-4 mx-auto w-[80%] lg:w-full bg-blend-darken"
+          >
+            <!-- slide  one -->
+            <div
+              class="mx-auto py-4 rounded-s-xl lg:col-span-1 mt-2 opacity-100"
+            >
+              <img
+                class="w-full opacity-90 bg-[#FFBF0F] rounded-lg"
+                src="images/Group115.png"
+                alt=""
+              />
+              <div class="flex items-center text-center justify-center">
+                <div
+                  class="text-left inter space-y-8 lg:space-y-0 brightness-100 w-1/2 -translate-y-36"
+                >
+                  <h3
+                    class="text-4xl lg:text-2xl font-extrabold lg:ml-5 text-[#030712CC]"
+                  >
+                    15% OFF
+                  </h3>
+                  <p
+                    class="text-3xl lg:text-sm px-6 w-[80%] lg:w-full font-semibold text-[#030712CC]"
+                  >
+                    on your next purchase
+                  </p>
+                  <p
+                    class="text-3xl lg:text-sm px-6 w-[80%] lg:w-full font-semibold text-[#03071280]"
+                  >
+                    use by January 2024
+                  </p>
+                </div>
+                <div
+                  class="text-center raleway items-center space-y-8 lg:space-y-0 brightness-100 w-1/2 -translate-y-36"
+                >
+                  <h3
+                    class="text-4xl lg:text-2xl font-extrabold lg:ml-5 text-[#030712CC] raleway"
+                  >
+                    NEW15
+                  </h3>
+                  <p
+                    class="text-xl lg:text-sm px-6 w-[80%] lg:w-full font-semibold text-[#030712CC]"
+                  >
+                    Coupon Code
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- slide  2 -->
+            <div
+              class="mx-auto py-3 justify-center items-center text-center rounded-lg lg:col-span-1 lg:mt-10 bg-blend-darken"
+            >
+              <!-- slide  two -->
+
+              <img
+                class="w-[98%] mb-0 bg-[#F78C9C] rounded-xl"
+                src="images/Group115.png"
+                alt=""
+              />
+              <div class="flex items-center text-center justify-center">
+                <div
+                  class="text-left inter space-y-8 lg:space-y-0 brightness-100 w-1/2 -translate-y-36"
+                >
+                  <h3
+                    class="text-4xl lg:text-2xl font-extrabold lg:ml-5 text-[#030712CC]"
+                  >
+                    20% OFF
+                  </h3>
+                  <p
+                    class="text-3xl lg:text-sm px-6 w-[80%] lg:w-full font-semibold text-[#030712CC]"
+                  >
+                    on your next purchase
+                  </p>
+                  <p
+                    class="text-3xl lg:text-sm px-6 w-[80%] lg:w-full font-semibold text-[#03071280]"
+                  >
+                    use by January 2024
+                  </p>
+                </div>
+                <div
+                  class="text-center raleway items-center space-y-8 lg:space-y-0 brightness-100 w-1/2 -translate-y-36"
+                >
+                  <h3
+                    class="text-4xl lg:text-2xl font-extrabold lg:ml-5 text-[#030712CC]"
+                  >
+                    Couple 20
+                  </h3>
+                  <p
+                    class="text-xl lg:text-sm px-6 w-[80%] lg:w-full font-semibold text-[#030712CC]"
+                  >
+                    Coupon Code
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex navbar-end">
+            <span>
+              <a
+                class="btn border-1 border-[#1DD100] bg-white text-[#1DD100] raleway font-semibold"
+                >See All Offers
+              </a>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-[1170px] mx-auto  rounded-xl border-t-4 border-t-[#1DD100]  mt-12">
+        <div class="text-center">
+          <h2 class="text-4xl font-extrabold mt-12 raleway">MBF Paribahan</h2>
+          <p class="text-2xl px-36 py-12 inter text-[#03071299]">
+            From initial booking to reaching the destination, passengers can
+            expect reliability, comfort, and a range of amenities tailored to
+            their needs. .
+          </p>
+          
+
+        
+          <img
+            class="w-full opacity-90 bg-[#f2f2f2] rounded-lg"
+            src="images/Group115.png"
+            alt=""
+          />
+          
+         <div class="flex justify-between">
+            <div class="-translate-y-96 mx-0 w-1/2 ">
+           
+                <div class="flex ml-8 justify-between">
+                    <div><img src="images/bus-logo.png" class="w-16 flex-row" /></div>
+                <div class="ml-3 flex ">
+                  <div class="mr-12">
+                    <h2 class="text-4xl lg:text-2xl font-extrabold p-1 block raleway">
+                        Greenline Paribahan
+                      </h2>
+                      <p class="font-semibold text-2xl lg:text-sm mt-3 lg:mt-4 mb-2">
+                        <p>Coach-009-WEB ! AC_Business</p>
+                      </p>
+                  </div>
+                </div>
+                  <div class="flex  justify-end">
+                    <span>
+                      <a
+                        class="btn border-1 bg-[#1DD10026] inter  text-[#1DD100] raleway font-semibold"
+                        ><img src="images/seat-green.png" class="w-6" /><span id="available-seat">8</span> Seats left 
+                      </a>
+                    </span>
+                  </div>
+                </div>
+               
+                <div class="bg-[#4b4d4b11] mt-12 p-4 ml-3 rounded-xl">
+                    <div class="mb-4 flex justify-between border-b border-dashed pb-2">
+                        <label for="from" class="block text-sm font-medium text-gray-700">Route</label>
+                        <label for="from" class="block text-sm font-medium text-gray-700">Dhaka - Sylhet</label>
+                    </div>
+                    <div class="mb-4 flex justify-between border-b border-dashed pb-2">
+                        <label for="to" class="block text-sm font-medium text-gray-700">Departure Time</label>
+                        <label for="to" class="block text-sm font-medium text-gray-700">9pm</label>
+                    </div>
+                
+                    <div class="mb-4 py-2 inter text-sm">
+                        <button class="bg-gray-400 mb-2 rounded-lg p-1">Boarding Point - Laxmipur</button>
+                        <button class="bg-gray-400 mb-2 rounded-lg p-1">Dropping Point - Bogura</button>
+                        <button class="bg-gray-400 mb-2 rounded-lg p-1">Est. Time - 11 Hour</button>
+                    </div>
+                </div>
+                
+       
+            </div>
+              <div class="-translate-y-96 mx-0 w-1/2 ">
+               
+                <div class=" mt-24 ml-56 justify-between">
+                    <div><img src="images/fare.png" class="w-16 flex-row ml-24" /></div>
+                <div class="ml-16 flex ">
+                  <div class="mr-12">
+                    <h2 class="text-4xl lg:text-2xl font-extrabold p-1 block">
+                        550 Taka
+                      </h2>
+                    
+                  </div>
+                </div>
+                   
+                </div>
+               
+                 
+                
+       
+            </div>
+            
+         </div>
+         <img
+            class="w-[74px] h-80 mr-2 px-0 -mt-[400px] ml-[340px] -translate-y-80 translate-x-80 opacity-90 bg-[#f2f2f2] rounded-lg"
+            src="images/info-devider.png"
+            alt=""
+          />
+      </section>
+
+      
+
+      <section class="w-[1170px] mx-auto mt-1"> 
+
+        <div class="grid grid-cols-2">
+            <div class="  border-r-4 border-gray-300 border-dashed ">
+                <div class="my-1  mt-1 ">
+                    <h3 class="text-black font-bold text-3xl">Select Your Seat</h3>
+                </div>
+                <div class="flex justify-between my-12  mt-12 "> <div>
+                    <span>
+                        <a
+                          class="btn border-1  text-gray-500 raleway font-semibold"
+                          ><img src="images/seat-gray.png" class="w-6" /> Available
+                        </a>
+                      </span>
+                </div>
+                <div>
+                     
+                    <span>
+                        <a
+                          class="btn border-1 mr-4   text-[#1DD100] raleway font-semibold"
+                          ><img src="images/seat-green-filled.png" class="w-6" /> Selected
+                        </a>
+                      </span>
+                </div>
+            </div>
+                <!-- seat start -->
+                <div class="inter"> 
+                  <div     class="p-4   flex justify-end rounded-md text-end cursor-pointer  "
+                  >  <i class="fa-solid fa-dharmachakra flex justify-end mr-10 px-6 p-4 m-6 bg-gray-300"></i></div>
+                    <div class="flex justify-center  my-1 w-full gap-12 py-12">
+                        <div
+                        class="p-4 rounded-md text-center cursor-pointer hover:bg-blue-200"
+                      >
+                        A
+                      </div>
+                      
+                      <kbd id="A1" class="tickets p-4 bg-gray-300 border border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>A1</h5></kbd>
+                      <kbd id="A3" class="tickets p-4 border bg-gray-300 border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>A3</h5></kbd>
+                      <kbd id="A2" class="tickets p-4 border bg-gray-300 border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>A2</h5></kbd>
+                      <kbd id="A4" class="tickets p-4 border bg-gray-300 border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>A4</h5></kbd> 
+                    </div>
+                    <div class="flex justify-center  my-1 w-full gap-12">
+                        <div
+                        class="p-4 rounded-md text-center cursor-pointer hover:bg-blue-200"
+                      >
+                        B
+                      </div>
+                      
+                      <kbd id="B1"   class="tickets p-4 border bg-gray-300 border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>B1</h5></kbd>
+                      <kbd id="B2"   class="tickets p-4 border bg-gray-300 border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>B2</h5></kbd>
+                      <kbd id="B3"   class="tickets p-4 border bg-gray-300 border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>B3</h5></kbd>
+                      <kbd id="B4"   class="tickets p-4 border bg-gray-300 border-gray-300 rounded-md text-center cursor-pointer hover:bg-blue-200"><h5>B4</h5></kbd> 
+                    </div>
+                    
+                    
+                  </div>
+                  <!-- seat end -->
+            </div>
+
+            <div class="cost-section  ">
+                <div>
+                    <h1 class="raleway text-black font-bold mt-1  ml-12 text-3xl raleway ">Select Your Seat
+                    </h1>
+                </div>
+                <div class="container bg-gray-200   mt-12 mx-12">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-200">
+                            <tr class="text-black font-bold">
+                                <th class="px-6 py-3 text-left text-xs     uppercase tracking-wider text-black font-bold">Seat <span id="seat-number" class="bg-[#1DD100] text-white p-2 rounded-xl">0</span></th>
+                                <th class="px-6 py-3 text-left text-xs     uppercase tracking-wider text-black font-bold">Class</th>
+                                <th class="px-6 py-3 text-left text-xs     uppercase tracking-wider text-black font-bold">Price</th>
+                            </tr>
+                        </thead>
+                        <tr id="title-container" class="bg-gray-300 px-24 gap-36 text-center mx-auto divide-y divide-gray-400 py-12 border-b-4 border-r-gray-700">
+                           
+                        </tr>
+                        <!-- <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">John Doe</td>
+                                <td class="px-6 py-4 whitespace-nowrap">30</td>
+                                <td class="px-6 py-4 whitespace-nowrap">New York</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
+                                <td class="px-6 py-4 whitespace-nowrap">25</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Los Angeles</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">Michael Johnson</td>
+                                <td class="px-6 py-4 whitespace-nowrap">35</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Chicago</td>
+                            </tr>
+                           
+                        </tbody> -->
+                        <tr>
+                            <th  class="px-6 text-2xl  py-3 text-left   uppercase tracking-wider text-black font-bold  ">Total Price</th>
+                            <th class="px-6  text-2xl py-3 text-left   font-medium text-gray-500 uppercase tracking-wider"> </th>
+                            <th class="px-6  text-2xl py-3 text-left   uppercase tracking-wider text-black font-bold">BDT <span class="px-4"></span><span id="total-price">0</span></th>
+                        </tr>
+                    </table>
+                    <div class="flex items-center ml-12 w-full py-12">
+                        <input id="input-field" type="text" class="px-4 w-full py-5 border rounded-l-md focus:outline-none focus:ring focus:border-blue-300" placeholder="Have any copupon?">
+                        <button id="apply-btn" class="bg-[#1DD100] text-white px-4 py-3 -translate-x-24 rounded-r-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Apply</button>
+                    </div>
+                    <div class="flex text-2xl justify-between p-6">
+                        <h1 class="font-bold text-black">Grand Total</h1>
+                        <h1 class="mr-[77px] font-bold text-black">BDT <span id="grand-total">0</span></h1>
+                    </div>
+                    
+                    
+                    
+                </div>
+                <div class="mb-4 ml-12 mt-12">
+                    <label for="passenger_name" class="block text-sm font-medium text-gray-700">Passenger Name*</label>
+                    <input type="text" id="passenger_name" name="passenger_name" placeholder="Enter your name" class="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200">
+                </div>
+                <div class="mb-4 ml-12 mt-12">
+                    <label for="passenger_name" class="block text-sm font-medium text-gray-700">Phone Number*</label>
+                    <input type="text" id="passenger_name" name="passenger_name" placeholder="Enter your phone number" class="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200">
+                </div>
+                <div class="mb-4 ml-12 mt-12">
+                    <label for="passenger_name" class="block text-sm font-medium text-gray-700">Email ID</label>
+                    <input type="text" id="passenger_name" name="passenger_name" placeholder="Enter your email id" class="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200">
+                        
+
+                </div>
+                <div class="mb-4 ml-12 mt-12 w-full">
+                    <button id="next-btn" class="bg-[#1DD100] text-white px-1 text-2xl font-bold   rounded-r-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600 w-full rounded-xl py-4">Next</button>
+
+
+                </div>
+                <div  class="flex justify-evenly inter">
+                    <div><a href="">Terms and Conditions</a></div>
+                    <div>Cancellation Policy</div>
+                </div>
+                
+                
+            </div>
+        </div>
+      </section>
+
+    </main>
+
+    <section id="modal" class="hidden">
+      <img src="images/success Modal Frame.jpg" alt="">
+    </section>
+
+    <script src="scripts/ticket.js"></script>
+  </body>
+</html>
